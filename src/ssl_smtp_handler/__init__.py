@@ -2,8 +2,8 @@ from email.message import EmailMessage
 from email.utils import localtime
 from logging import LogRecord
 from logging.handlers import SMTPHandler
-from smtplib import SMTP_PORT
 from smtplib import SMTP_SSL
+from smtplib import SMTP_SSL_PORT
 from ssl import SSLContext
 from typing import List
 from typing import Optional
@@ -47,7 +47,7 @@ class SSLSMTPHandler(SMTPHandler):
         )
         self.mailhost: str
         if self.mailport is None:
-            self.mailport = SMTP_PORT
+            self.mailport = SMTP_SSL_PORT
         self.username: str
         self.password: str
         self.fromaddr: str
