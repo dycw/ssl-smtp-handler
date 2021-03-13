@@ -29,7 +29,6 @@ jobs:
           virtualenvs-in-project: true
       - name: publish
         run: |
-          source .venv/bin/activate
           poetry version $(git describe --tags --abbrev=0)
           poetry build
           poetry publish --username dycw --password ${{ secrets.PYPI_PASSWORD }}
