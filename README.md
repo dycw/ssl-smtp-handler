@@ -1,6 +1,6 @@
 # ssl-smtp-handler
 
-A Python standard library logging handler which uses SMTP_SSL to send its mail
+[![PyPI version](https://badge.fury.io/py/ssl-smtp-handler.svg)](https://badge.fury.io/py/ssl-smtp-handler)
 
 ## Introduction
 
