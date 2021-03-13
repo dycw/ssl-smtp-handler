@@ -83,3 +83,6 @@ class SSLSMTPHandler(SMTPHandler):
             raise
         except Exception:
             self.handleError(record)
+
+
+__all__ = ["SSLSMTPHandler"]
