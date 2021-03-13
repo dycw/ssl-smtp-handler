@@ -20,8 +20,26 @@ pip install ssl-smtp-handler
 
 ## Usage
 
-Gmail is probably the easiest to set up. Get hold a Gmail account and enable
-2-Step Verification:
+Gmail is probably the easiest to set up. For example:
+
+```python
+from logging import basicConfig, info
+from ssl_smtp_handler import SSLSMTPHandler
+
+handler = SSLSMTPHandler(
+    mailhost='smtp.gmail.com',
+    fromaddr='from@gmail.com',
+    toaddrs=['to@gmail.com'],
+    subject='Example subject',
+    credentials=('username@gmail.com', 'wwqdhyxxhmconvsu'),
+)
+handler.setLevel('INFO')
+basicConfig(handlers=[handler], level='INFO')
+info('This is an example message')
+```
+
+To try this for yourself, get hold a Gmail account and enable 2-Step
+verification:
 
 ![screenshot1.png](doc/screenshot1.png)
 
@@ -40,19 +58,3 @@ Use this password in your program:
 Emails will look like this:
 
 ![screenshot5.png](doc/screenshot5.png)
-
-```python
-from logging import basicConfig, info
-from ssl_smtp_handler import SSLSMTPHandler
-
-handler = SSLSMTPHandler(
-    mailhost='smtp.gmail.com',
-    fromaddr='from@gmail.com',
-    toaddrs=['to@gmail.com'],
-    subject='Example subject',
-    credentials=('username@gmail.com', 'wwqdhyxxhmconvsu'),
-)
-handler.setLevel('INFO')
-basicConfig(handlers=[handler], level='INFO')
-info('This is an example message')
-```
