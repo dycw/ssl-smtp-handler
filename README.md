@@ -28,7 +28,7 @@ from ssl_smtp_handler import SSLSMTPHandler
 
 handler = SSLSMTPHandler(
     mailhost='smtp.gmail.com',
-    fromaddr='from@gmail.com',
+    fromaddr='username@gmail.com',
     toaddrs=['to@gmail.com'],
     subject='Example subject',
     credentials=('username@gmail.com', 'password'),
@@ -54,7 +54,3 @@ Name it whatever you want:
 Use this password in your program:
 
 ![screenshot4.png](doc/screenshot4.png)
-
-Emails will look like this:
-
-![screenshot5.png](doc/screenshot5.png)
