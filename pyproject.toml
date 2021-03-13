@@ -31,12 +31,12 @@ license = "MIT"
 homepage = "https://github.com/dycw/ssl-smtp-handler"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
-pre-commit = "^2"
-pytest = "^6"
-pytest-xdist = "^2"
+pre-commit = "^2.11"
+pytest = "^6.2"
+pytest-xdist = "^2.2"
 
 
 [tool.pytest.ini_options]
