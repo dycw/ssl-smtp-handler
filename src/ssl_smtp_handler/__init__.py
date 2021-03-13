@@ -23,6 +23,14 @@ class SSLSMTPHandler(SMTPHandler):
         timeout: float = 1.0,
         context: Optional[SSLContext] = None,
     ) -> None:
+        """Initialize the SSLSMTPHandler. Arguments are the same as
+        SMTPHandler except that:
+
+        - "credentials" is mandatory; pass in a tuple of the form (username,
+                        password)
+        - "secure" is deprecated; use "context" instead; see
+                   https://docs.python.org/3/library/smtplib.html
+        """
         if credentials is None:
             raise ValueError(
                 '"credentials" is mandatory; please pass in a tuple of the '

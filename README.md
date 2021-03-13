@@ -31,7 +31,7 @@ handler = SSLSMTPHandler(
     fromaddr='from@gmail.com',
     toaddrs=['to@gmail.com'],
     subject='Example subject',
-    credentials=('username@gmail.com', 'wwqdhyxxhmconvsu'),
+    credentials=('username@gmail.com', 'password'),
 )
 handler.setLevel('INFO')
 basicConfig(handlers=[handler], level='INFO')
