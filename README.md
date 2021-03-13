@@ -37,6 +37,10 @@ Use this password in your program:
 
 ![screenshot4.png](doc/screenshot4.png)
 
+Emails will look like this:
+
+![screenshot5.png](doc/screenshot5.png)
+
 ```python
 from logging import basicConfig, info
 from ssl_smtp_handler import SSLSMTPHandler

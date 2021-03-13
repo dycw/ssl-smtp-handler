@@ -25,9 +25,10 @@ virtual_env = ".venv/bin/python"
 [tool.poetry]
 name = "ssl-smtp-handler"
 version = "0.0.0"
-description = "A Python standard library logging handler which uses SMTP_SSL to send its mail "
+description = "A standard library compatible logging handler which sends mail via SMTP_SSL"
 authors = ["Derek Wan <d.wan@icloud.com>"]
 license = "MIT"
+homepage = "https://github.com/dycw/ssl-smtp-handler"
 
 [tool.poetry.dependencies]
 python = "^3.6"
