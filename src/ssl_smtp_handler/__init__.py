@@ -5,21 +5,19 @@ from logging.handlers import SMTPHandler
 from smtplib import SMTP_SSL
 from smtplib import SMTP_SSL_PORT
 from ssl import SSLContext
-from typing import List
 from typing import Optional
-from typing import Tuple
 from typing import Union
 
 
 class SSLSMTPHandler(SMTPHandler):
     def __init__(
         self,
-        mailhost: Union[str, Tuple[str, int]],
+        mailhost: Union[str, tuple[str, int]],
         fromaddr: str,
-        toaddrs: List[str],
+        toaddrs: list[str],
         subject: str,
-        credentials: Optional[Tuple[str, str]] = None,
-        secure: Optional[Union[Tuple[()], Tuple[str], Tuple[str, str]]] = None,
+        credentials: Optional[tuple[str, str]] = None,
+        secure: Optional[Union[tuple[()], tuple[str], tuple[str, str]]] = None,
         timeout: float = 1.0,
         context: Optional[SSLContext] = None,
     ) -> None:
@@ -59,7 +57,7 @@ class SSLSMTPHandler(SMTPHandler):
         self.username: str
         self.password: str
         self.fromaddr: str
-        self.toaddrs: List[str]
+        self.toaddrs: list[str]
         self.timeout: float
         self.context = context
 
