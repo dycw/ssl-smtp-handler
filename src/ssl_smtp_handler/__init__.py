@@ -57,7 +57,7 @@ class SSLSMTPHandler(SMTPHandler):
         self.username: str
         self.password: str
         self.fromaddr: str
-        self.toaddrs: list[str]
+        self.toaddrs: List[str]
         self.timeout: float
         self.context = context
 
