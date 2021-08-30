@@ -6,18 +6,18 @@ from smtplib import SMTP_SSL
 from smtplib import SMTP_SSL_PORT
 from ssl import SSLContext
 from typing import Optional
-from typing import Union
+from typing import Union, Tuple, List
 
 
 class SSLSMTPHandler(SMTPHandler):
     def __init__(
         self,
-        mailhost: Union[str, tuple[str, int]],
+        mailhost: Union[str, Tuple[str, int]],
         fromaddr: str,
-        toaddrs: list[str],
+        toaddrs: List[str],
         subject: str,
-        credentials: Optional[tuple[str, str]] = None,
-        secure: Optional[Union[tuple[()], tuple[str], tuple[str, str]]] = None,
+        credentials: Optional[Tuple[str, str]] = None,
+        secure: Optional[Union[Tuple[()], Tuple[str], Tuple[str, str]]] = None,
         timeout: float = 1.0,
         context: Optional[SSLContext] = None,
     ) -> None:
